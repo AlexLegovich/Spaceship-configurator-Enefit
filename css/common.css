@@ -1,0 +1,72 @@
+/* Styles for commonthings */
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+/* Container */
+.container {
+  max-width: 59rem;
+  margin: 0 auto;
+  padding-top: 32px;
+}
+
+/* ----------- */
+
+
+/* Button styles */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--size-16);
+  line-height: 125%;
+  gap: var(--size-4);
+  padding: var(--size-12) var(--size-20);
+  max-width: max-content;
+  border-radius: var(--radius-full);
+  color: var(--text-white);
+}
+.btn span {
+  padding: var(--size-2) var(--size-4);
+}
+
+.btn--primary {
+  background-color: var(--btn-primary);
+  font-weight: var(--bold);
+  transition: var(--transition);
+}
+
+@media (any-hover: hover){
+  .btn--primary:hover{
+    background-color: var(--btn-primary-hover);
+  }
+}
+
+.btn--primary:focus-visible{
+  outline: var(--size-4) solid var(--stroke-focus);
+  outline-offset: var(--size-4);
+  transition: none;
+}
+
+.btn--primary:active{
+  background-color: var(--btn-primary-active);
+}
+
+/* --------------- */
+
+/* Label styles */
+
+.label {
+  font-size: var(--size-16);
+  font-weight: var(--bold);
+  line-height: 125%;
+}
+
+.label--main{
+  color: var(--text-body);
+}
+.label--accent{
+  color: var(--text-accent);
+}
+

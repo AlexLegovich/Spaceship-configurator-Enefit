@@ -1,3 +1,10 @@
+@import 'reset.css';
+@import 'vars.css';
+@import 'common.css';
+
 body{
   font-family: var(--font-family);
+  font-size: var(--size-16);
+  font-weight: var(--regular);
+  background-color: var(--bg-alternative);
 }
