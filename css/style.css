@@ -6,7 +6,7 @@ body{
   font-family: var(--font-family);
   font-size: var(--size-16);
   font-weight: var(--regular);
-  background-color: var(--bg-alternative);
+  background-color: var(--bg-higher);
 }
 
 /* App */
@@ -62,4 +62,77 @@ body{
   .header__logo {
     max-height: var(--size-40);
   }
+}
+
+
+/* App */
+
+.app__content{
+  padding: var(--size-32);
+  background-color: var(--bg-alternative)
+}
+
+/* Select */
+
+.select{
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-8);
+}
+.select__block {
+  display: flex;
+  gap: var(--size-32);
+}
+
+.select__block input {
+  appearance: none;
+  display: none;
+}
+.select__block input:checked +  label{
+  background-color: var(--bg-success-main);
+  border-color: var(--stroke-accent);
+  transition:  var(--transition);
+  cursor: default;
+  pointer-events: none;
+}
+
+@media (any-hover: hover){
+  .select__block input:checked +  label:hover{
+    box-shadow: none;
+  }
+}
+
+.select__button-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--size-8);
+  padding: var(--size-16);
+  background-color: var(--bg-white);
+  border-radius: var(--radius-8);
+  width: 100%;
+  border: var(--size-1) solid var(--stroke-container);
+  text-align: center;
+  transition: var(--transition);
+}
+
+@media (any-hover: hover){
+  .select__button-main:hover{
+    box-shadow: var(--shadow-main);
+  }
+}
+
+.select__button-swatch {
+  min-height: var(--size-32);
+  width: 100%;
+  border-radius: var(--radius-4);
+  border: var(--size-1) solid var(--stroke-container);
+}
+.select__button-swatch:not(:last-child){
+  margin-bottom: var(--size-8);
+}
+
+.select__button-title {
+}
+.select__button-value {
 }
