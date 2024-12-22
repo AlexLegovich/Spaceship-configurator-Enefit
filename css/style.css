@@ -2,25 +2,36 @@
 @import 'vars.css';
 @import 'common.css';
 
-body{
+body {
   font-family: var(--font-family);
   font-size: var(--size-16);
-  font-weight: var(--regular);
+  font-weight: 400;
   background-color: var(--bg-higher);
+  color: var(--text-body);
 }
 
 /* App */
-.app{
+.app {
   margin-top: var(--size-40);
   overflow: hidden;
   border-radius: var(--radius-8);
 }
 
-@media (max-width: 767.98px){
-    .app{
-      margin-top: 0;
-      border-radius: 0;
-    }
+@media (max-width: 767.98px) {
+  .app {
+    margin-top: 0;
+    border-radius: 0;
+  }
+}
+
+.app__content {
+}
+
+.app__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-40);
+  max-width: 34.0625rem;
 }
 
 /* Header */
@@ -34,70 +45,95 @@ body{
   background-color: var(--bg-white);
 }
 
-@media (max-width: 767.98px){
-    .header{
-      flex-direction: column-reverse;
-      align-items: flex-start;
-      padding: var(--size-32) var(--size-24);
-    }
+@media (max-width: 767.98px) {
+  .header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding: var(--size-32) var(--size-24);
+  }
 }
 .header__title {
   font-size: var(--size-36);
+  font-weight: var(--bold);
   line-height: 122%;
   letter-spacing: -0.01em;
   color: var(--text-headline);
 }
 
-@media (max-width: 767.98px){
-    .header__title{
-      font-size: var(--size-24);
-      line-height: 116%;
-    }
+@media (max-width: 767.98px) {
+  .header__title {
+    font-size: var(--size-24);
+    line-height: 116%;
+  }
 }
 
-.header__logo{
+.header__logo {
   max-height: 32px;
 }
-@media (min-width:768px){
+@media (min-width: 768px) {
   .header__logo {
     max-height: var(--size-40);
   }
 }
 
-
 /* App */
 
-.app__content{
+.app__content {
   padding: var(--size-32);
-  background-color: var(--bg-alternative)
+  background-color: var(--bg-alternative);
 }
 
 /* Select */
 
-.select{
+.select {
   display: flex;
   flex-direction: column;
   gap: var(--size-8);
+}
+
+.select__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--size-8);
+  margin-bottom: var(--size-8);
 }
 .select__block {
   display: flex;
   gap: var(--size-32);
 }
 
+.select__value {
+  line-height: 125%;
+}
+
+.select__ranges {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--size-8);
+}
+.select__range-number {
+  font-size: 12px;
+  line-height: 133%;
+  text-transform: uppercase;
+  color: var(--text-supportive);
+}
+
 .select__block input {
   appearance: none;
   display: none;
 }
-.select__block input:checked +  label{
+.select__block input:checked + label {
   background-color: var(--bg-success-main);
   border-color: var(--stroke-accent);
-  transition:  var(--transition);
+  transition: var(--transition);
   cursor: default;
   pointer-events: none;
 }
 
-@media (any-hover: hover){
-  .select__block input:checked +  label:hover{
+@media (any-hover: hover) {
+  .select__block input:checked + label:hover {
     box-shadow: none;
   }
 }
@@ -114,10 +150,11 @@ body{
   border: var(--size-1) solid var(--stroke-container);
   text-align: center;
   transition: var(--transition);
+  overflow: hidden;
 }
 
-@media (any-hover: hover){
-  .select__button-main:hover{
+@media (any-hover: hover) {
+  .select__button-main:hover {
     box-shadow: var(--shadow-main);
   }
 }
@@ -128,11 +165,41 @@ body{
   border-radius: var(--radius-4);
   border: var(--size-1) solid var(--stroke-container);
 }
-.select__button-swatch:not(:last-child){
+.select__button-swatch:not(:last-child) {
   margin-bottom: var(--size-8);
 }
 
 .select__button-title {
 }
 .select__button-value {
+}
+
+#packages .select__button-main {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.select__button-list {
+}
+.list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--size-16) var(--size-8);
+  gap: var(--size-8);
+  text-align: left;
+  background-color: var(--bg-success-main);
+  flex-grow: 1;
+  min-height: 5.875rem;
+  border-radius: var(--size-16) var(--size-16) 0 0 ;
+  transition: var(--transition);
+}
+.list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--size-2);
+  font-size: var(--size-12);
+  color: var(--text-accent);
 }

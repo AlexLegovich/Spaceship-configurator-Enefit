@@ -1,50 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enefit spaceship configurator</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Inter:regular600&display=swap" rel="stylesheet" />
-</head>
-<body>
-  <div class="container">
-    <div class="app">
-      <header class="header">
-        <h1 class="header__title">🚀 Spaceship configurator</h1>
-        <img src="/img/enefit-logo-full.svg" alt="Enefit logo" class="header__logo">
-      </header>
-      <div class="app__content">
-        <div class="app__main">
-          <div class="main__select select">
-            <div class="select__label label label--main">Select color:</div>
-            <div class="select__block" id="colors">
-              <input type="radio" name="color" id="snow"  value="">
-              <label for="snow" class="select__button-main">
-                <div class="select__button-swatch"></div>
-                <div class="select__button-title label--accent">name</div>
-                <div class="select__button-value value">value</div>
-              </label>
-              <input type="radio" name="color" id="volcano"value="">
-              <label for="volcano" class="select__button-main">
-                <div class="select__button-swatch"></div>
-                <div class="select__button-title label--accent">name</div>
-                <div class="select__button-value value">value</div>
-              </label>
-              <input type="radio" name="color" id="sky"value="">
-              <label for="sky" class="select__button-main">
-                <div class="select__button-swatch"></div>
-                <div class="select__button-title label--accent">name</div>
-                <div class="select__button-value value">value</div>
-              </label>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enefit spaceship configurator</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:regular,600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="app">
+        <header class="header">
+          <h1 class="header__title">🚀 Spaceship configurator</h1>
+          <img
+            src="/img/enefit-logo-full.svg"
+            alt="Enefit logo"
+            class="header__logo"
+          />
+        </header>
+        <div class="app__content">
+          <div class="app__main">
+            <div class="main__select select">
+              <div class="select__label label label--main">Select color:</div>
+              <div class="select__block" id="colors">
+                <input type="radio" name="color" id="snow" value="" />
+                <label for="snow" class="select__button-main">
+                  <div class="select__button-swatch"></div>
+                  <div class="select__button-title label--accent">name</div>
+                  <div class="select__button-value value">value</div>
+                </label>
+                <input type="radio" name="color" id="volcano" value="" />
+                <label for="volcano" class="select__button-main">
+                  <div class="select__button-swatch"></div>
+                  <div class="select__button-title label--accent">name</div>
+                  <div class="select__button-value value">value</div>
+                </label>
+                <input type="radio" name="color" id="sky" value="" />
+                <label for="sky" class="select__button-main">
+                  <div class="select__button-swatch"></div>
+                  <div class="select__button-title label--accent">name</div>
+                  <div class="select__button-value value">value</div>
+                </label>
+              </div>
+            </div>
+            <div class="main__select select">
+              <div class="select__content">
+                <div class="select__label label--main">Select power:</div>
+                <div class="select__value" id="power-price">150</div>
+              </div>
+              <input
+                type="range"
+                name="power"
+                id="power"
+                value="130"
+                min="100"
+                max="200"
+                step="0"
+              />
+              <div class="select__ranges">
+                <div class="select__range-number">100 mw</div>
+                <div class="select__range-number">200 mw</div>
+              </div>
+            </div>
+            <div class="main__select select">
+              <div class="select__label label label--main">Warp drive:</div>
+              <div class="select__block" id="warp">
+                <input type="radio" name="warp" id="warp-none" value="" />
+                <label for="warp-none" class="select__button-main">
+                  <div class="select__button-title label--accent">name</div>
+                  <div class="select__button-value value">value</div>
+                </label>
+                <input type="radio" name="warp" id="warp-yes" value="" />
+                <label for="warp-yes" class="select__button-main">
+                  <div class="select__button-title label--accent">name</div>
+                  <div class="select__button-value value">value</div>
+                </label>
+              </div>
+            </div>
+            <div class="main__select select">
+              <div class="select__label label label--main">
+                Select option package:
+              </div>
+              <div class="select__block" id="packages">
+                <input type="radio" name="package" id="basic" value="" />
+                <label for="basic" class="select__button-main">
+                  <div class="select__button-title label--accent">name</div>
+                  <div class="select__button-value value">value</div>
+                  <ul class="select__button-list list">
+                    <li class="list__item">
+                      <img src="" alt="" class="list__item-icon" />
+                      <div class="list__item-name">Air conditioning</div>
+                    </li>
+                    <li class="list__item">
+                      <img src="" alt="" class="list__item-icon" />
+                      <div class="list__item-name">Cloth seats</div>
+                    </li>
+                    <li class="list__item">
+                      <img src="" alt="" class="list__item-icon" />
+                      <div class="list__item-name">FM radio</div>
+                    </li>
+                  </ul>
+                </label>
+                <input type="radio" name="package" id="sport" value="" />
+                <label for="sport" class="select__button-main">
+                  <div class="select__button-title label--accent">name</div>
+                  <div class="select__button-value value">value</div>
+                  <ul class="select__button-list list">
+                    <li class="list__item">
+                      <img src="" alt="" class="list__item-icon" />
+                      <div class="list__item-name">Personal tech support</div>
+                    </li>
+                  </ul>
+                </label>
+                <input type="radio" name="package" id="lux" value="" />
+                <label for="lux" class="select__button-main">
+                  <div class="select__button-title label--accent">name</div>
+                  <div class="select__button-value value">value</div>
+                  <ul class="select__button-list list">
+                    <li class="list__item">
+                      <img src="" alt="" class="list__item-icon" />
+                      <div class="list__item-name">Chrome wheels</div>
+                    </li>
+                    <li class="list__item">
+                      <img src="" alt="" class="list__item-icon" />
+                      <div class="list__item-name">Window tint</div>
+                    </li>
+                    <li class="list__item">
+                      <img src="" alt="" class="list__item-icon" />
+                      <div class="list__item-name">Subwoofer</div>
+                    </li>
+                  </ul>
+                </label>
+              </div>
             </div>
           </div>
+          <div class="app__summary"></div>
         </div>
-        <div class="app__summary"></div>
       </div>
     </div>
-  </div>
-<script type="module" src="/index.js"></script>
-</body>
+    <script type="module" src="/index.js"></script>
+  </body>
 </html>
-

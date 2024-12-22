@@ -78,3 +78,102 @@
   line-height: 133%;
   color: var(--text-body);
 }
+
+
+/* Range styles */
+
+
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  border-radius: var(--radius-full);
+}
+
+                        /***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  height: var(--size-4);
+  border-radius: var(--radius-full);
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  height: var(--size-4);
+  border-radius: var(--radius-full);
+}
+
+
+/***** Thumb Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  appearance: none;
+  margin-top: -0.875rem;
+  background-color: var(--btn-primary);
+  width: var(--size-32); 
+  height: var(--size-32); 
+  border-radius:var(--radius-full);
+  transition: var(--transition);
+  background-image: url(/img/_icon-dragger.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+input[type="range"]::-webkit-slider-thumb:hover{
+  background-color: var(--btn-primary-hover);
+}
+input[type="range"]::-webkit-slider-thumb:active{
+  background-color: var(--btn-primary-active);
+}
+
+/***** Thumb Styles *****/
+/***** Firefox *****/
+input[type="range"]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0; /*Removes default border-radius that FF applies*/
+  margin-top: -0.875rem;
+  background-color: var(--btn-primary);
+  width: var(--size-32);
+  height: var(--size-32);
+  border-radius:var(--radius-full);
+  transition: var(--transition);
+  background-image: url(/img/_icon-dragger.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input[type="range"]::-moz-range-thumb:hover{
+  background-color: var(--btn-primary-hover);
+}
+input[type="range"]::-moz-range-thumb:active{
+  background-color: var(--btn-primary-active);
+}
+
+/***** Focus Styles *****/
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]:focus-visible::-webkit-slider-thumb {
+  outline: var(--size-2) solid var(--stroke-focus);
+  outline-offset: var(--size-2);
+  transition: none;
+  background-color: var(--btn-primary-active);
+}
+
+/******** Firefox ********/
+input[type="range"]:focus-visible::-moz-range-thumb {
+  outline: var(--size-2) solid var(--stroke-focus);
+  outline-offset: var(--size-2); 
+  transition: none;
+  background-color: var(--btn-primary-active);
+}
+
+input[name="warp"] +label{
+  flex: 0 1 10rem;
+}
