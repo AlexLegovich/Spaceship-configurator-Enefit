@@ -13,7 +13,7 @@ const colors = [
   },
   {
     name: 'Sky',
-    price: 300,
+    price: 100,
     swatch: 'linear-gradient(141deg, #7fcffc 0%, #0e7af8 100%)',
     image: './img/sky.png',
   },
@@ -61,16 +61,32 @@ const setInitialActiveColor = () => {
 }
 setInitialActiveColor()
 
-// const assignImageToInputs = () => {
-//   const inputs = document.querySelectorAll('input[name="color"]');
-//   const colorImage = document.querySelector('.color__image');
-//   inputs.forEach((input) => {
-//     input.addEventListener('change', (e) => {
-//       const selectedImage = e.target.getAttribute('data-image');
-//       colorImage.src = selectedImage; 
-//     });
-//   });
-// }
-// assignImageToInputs()
+
+const setInitialColorImage = (data) => {
+  const colorImage = document.querySelector('.summary__image');
+  const colorImageMobile = document.querySelector('.summary__image-mobile');
+  colorImage.src = data[0].image
+  colorImageMobile.src = data[0].image
+} 
+setInitialColorImage(colors)
+
+const assignImageToInputs = () => {
+  const inputs = document.querySelectorAll('input[name="color"]');
+  const colorImage = document.querySelector('.summary__image');
+  const colorImageMobile = document.querySelector('.summary__image-mobile');
+  inputs.forEach((input) => {
+    input.addEventListener('change', (e) => {
+      const selectedImage = e.target.getAttribute('data-image');
+      colorImage.src = selectedImage; 
+    });
+  });
+  inputs.forEach((input) => {
+    input.addEventListener('change', (e) => {
+      const selectedImage = e.target.getAttribute('data-image');
+      colorImageMobile.src = selectedImage; 
+    });
+  });
+}
+assignImageToInputs()
 
 export { setInitialActiveColor }

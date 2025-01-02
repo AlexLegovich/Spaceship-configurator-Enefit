@@ -55,7 +55,7 @@
                 type="range"
                 name="power"
                 id="power"
-                value="130"
+                value="150"
                 min="100"
                 max="200"
                 step="0"
@@ -87,8 +87,10 @@
               <div class="select__block" id="packages">
                 <input type="radio" name="package" id="basic" value="" />
                 <label for="basic" class="select__button-main">
-                  <div class="select__button-title label--accent">name</div>
-                  <div class="select__button-value value">value</div>
+                  <div class="select__button-header">
+                    <div class="select__button-title label--accent">name</div>
+                    <div class="select__button-value value">value</div>
+                  </div>
                   <ul class="select__button-list list">
                     <li class="list__item">
                       <img src="" alt="" class="list__item-icon" />
@@ -106,8 +108,10 @@
                 </label>
                 <input type="radio" name="package" id="sport" value="" />
                 <label for="sport" class="select__button-main">
-                  <div class="select__button-title label--accent">name</div>
-                  <div class="select__button-value value">value</div>
+                  <div class="select__button-header">
+                    <div class="select__button-title label--accent">name</div>
+                    <div class="select__button-value value">value</div>
+                  </div>
                   <ul class="select__button-list list">
                     <li class="list__item">
                       <img src="" alt="" class="list__item-icon" />
@@ -117,8 +121,10 @@
                 </label>
                 <input type="radio" name="package" id="lux" value="" />
                 <label for="lux" class="select__button-main">
-                  <div class="select__button-title label--accent">name</div>
-                  <div class="select__button-value value">value</div>
+                  <div class="select__button-header">
+                    <div class="select__button-title label--accent">name</div>
+                    <div class="select__button-value value">value</div>
+                  </div>
                   <ul class="select__button-list list">
                     <li class="list__item">
                       <img src="" alt="" class="list__item-icon" />
@@ -136,8 +142,51 @@
                 </label>
               </div>
             </div>
+            <img src="" alt="" class="summary__image-mobile">
           </div>
-          <div class="app__summary"></div>
+          <div class="summary">
+            <div class="summary-main  ">
+              <ul class="summary__list">
+                <li class="summary__item" id="base-price">
+                  <div class="summary__item-label label--supportive">Base price:</div>
+                  <div class="summary__item-sum label--main">0</div>
+                </li>
+                <li class="summary__item" id="color-price">
+                  <div class="summary__item-label label--supportive">Color:</div>
+                  <div class="summary__item-sum label--main">0</div>
+                </li>
+                <li class="summary__item" id="power-price">
+                  <div class="summary__label label--supportive">Power:</div>
+                  <div class="summary__item-sum label--main">0</div>
+                </li>
+                <li class="summary__item" id="warp-price">
+                  <div class="summary__label label--supportive">Warp drive:</div>
+                  <div class="summary__item-sum label--main">0</div>
+                </li>
+                <li class="summary__item" id="package-price">
+                  <div class="summary__label label--supportive">Option package:</div>
+                  <div class="summary__item-sum label--main">0</div>
+                </li>
+              </ul>
+              <div class="summary__total">
+                <div class="summary__total-label">Total:</div>
+                <div class="summary__total-sum">0</div>
+              </div>
+            </div>
+            <button class="summary__btn btn btn--primary">
+              <span>Checkout</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.29289 4.29289C7.90237 4.68342 7.90237 5.31658 8.29289 5.70711L14.5858 12L8.29289 18.2929C7.90237 18.6834 7.90237 19.3166 8.29289 19.7071C8.68342 20.0976 9.31658 20.0976 9.70711 19.7071L16.7071 12.7071C17.0976 12.3166 17.0976 11.6834 16.7071 11.2929L9.70711 4.29289C9.31658 3.90237 8.68342 3.90237 8.29289 4.29289Z" fill="white"/>
+                </svg>                  
+            </button>
+            <img src="" alt="" class="summary__image">
+          </div>
+        </div>
+      </div>
+      <div class="summary__floating">
+        <div class="summary__floating-total">
+          <div class="summary__floating-label">Total:</div>
+          <div class="summary__floating-sum">0</div>
         </div>
       </div>
     </div>

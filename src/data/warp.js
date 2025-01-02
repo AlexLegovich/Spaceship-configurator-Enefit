@@ -1,7 +1,7 @@
 const warp = [
   {
     name: 'YES',
-    price: 110,
+    price: 0,
   },
   {
     name: 'NO',

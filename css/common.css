@@ -67,6 +67,11 @@
   font-weight: var(--bold);
   line-height: 125%;
 }
+.label--supportive{
+  color: var(--text-supportive);
+  font-weight: var(--bold);
+  line-height: 125%;
+}
 .label--accent{
   color: var(--text-accent);
   font-weight: var(--bold);

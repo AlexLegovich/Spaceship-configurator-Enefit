@@ -1,7 +1,7 @@
 const packages = [
   {
     name: 'Basic',
-    price: 10,
+    price: 0,
   },
   {
     name: 'Sport',
@@ -9,7 +9,7 @@ const packages = [
   },
   {
     name: 'Lux',
-    price: 1500,
+    price: 500,
   },
 ]
 
