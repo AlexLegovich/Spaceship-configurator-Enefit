@@ -146,7 +146,7 @@ input[type="range"]::-moz-range-thumb {
   height: var(--size-32);
   border-radius:var(--radius-full);
   transition: var(--transition);
-  background-image: url(/img/_icon-dragger.svg);
+  background-image: url(img/_icon-dragger.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
